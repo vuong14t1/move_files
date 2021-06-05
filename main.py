@@ -3,15 +3,15 @@ import os
 import shutil
 
 images_file_exts = ["PNG", "png", "jpg", "jpeg", "JPG"]
-FOLDER_TO_TRACK = "temp/track"
-FOLDER_DESTINATION = "temp/src_image/img_minimize.png"
-FOLDER_SAVE = "temp/save_images/"
+FOLDER_DESTINATION = os.path.join(os.path.dirname(__file__), "static/image_1px/1x1.png")
+FOLDER_SAVE = os.path.join(os.path.dirname(__file__), "static/save_images/")
 
 
 def remove_and_move_file(path_des):
     os.remove(path_des)
+    print(FOLDER_DESTINATION)
     shutil.copy(FOLDER_DESTINATION, path_des)
-    print("Optimize done file " + path_des)
+    print("Optimize done file: " + path_des)
 
 
 def is_image(_file_name):
