@@ -1,2 +1,2 @@
-python main.py -i F:\WORK\tool\minimize_images\temp\track
+python main.py -i %1
 pause
